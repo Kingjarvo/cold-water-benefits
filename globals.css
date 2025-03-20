@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 30% 12%;
+
+    --card: 200 15% 95%;
+    --card-foreground: 215 30% 12%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 12%;
+ 
+    --primary: 204 85% 37%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 187 67% 48%;
+    --secondary-foreground: 0 0% 100%;
+ 
+    --muted: 210 20% 96.1%;
+    --muted-foreground: 215 16% 47%;
+ 
+    --accent: 200 30% 53%;
+    --accent-foreground: 0 0% 100%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 204 85% 37%;
+ 
+    --radius: 0.5rem;
+    
+    /* Custom color palette */
+    --dark-teal: 150 22% 13%;
+    --blue: 204 85% 37%;
+    --turquoise: 187 67% 48%;
+    --blue-gray: 203 19% 53%;
+    --beige: 46 14% 62%;
+  }
+ 
+  .dark {
+    --background: 150 22% 13%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 150 22% 13%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 150 22% 13%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 204 85% 37%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 187 67% 48%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 150 22% 20%;
+    --muted-foreground: 0 0% 80%;
+ 
+    --accent: 203 19% 53%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 150 22% 20%;
+    --input: 150 22% 20%;
+    --ring: 204 85% 37%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.benefit-card {
+  @apply p-6 transition-all duration-300 hover:shadow-lg bg-card rounded-lg;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-4 py-8;
+}
+
+.hero-section {
+  @apply bg-gradient-to-r from-[#182825] to-[#016FB9] text-white py-16;
+}
+
+.nav-link {
+  @apply px-4 py-2 rounded-md hover:bg-[#22AED1]/20 transition-colors;
+}
+
+.nav-link.active {
+  @apply bg-[#22AED1]/20 font-medium;
+}
+
+.btn-primary {
+  @apply bg-[#016FB9] text-white hover:bg-[#016FB9]/90 px-4 py-2 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-[#22AED1] text-white hover:bg-[#22AED1]/90 px-4 py-2 rounded-md transition-colors;
+}
+
+.footer {
+  @apply bg-[#AFA98D] text-[#182825] py-8;
+}
+
+.section-heading {
+  @apply text-2xl font-bold text-[#182825] mb-4;
+}
+
+.subsection-heading {
+  @apply text-xl font-semibold text-[#016FB9] mb-3;
+}
